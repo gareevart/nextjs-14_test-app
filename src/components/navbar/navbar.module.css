@@ -1,0 +1,17 @@
+.navbar {
+	display: flex;
+	height: 80px;
+	padding: 20px;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 12px;
+	background: var(--bg-container);
+	margin-top: 20px;
+	color: var(--text);
+}
+
+.logo {
+	font-size: 30px;
+	font-weight: bold;
+	color: var(--text);
+}
