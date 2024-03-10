@@ -39,7 +39,7 @@
 
 .button:first-child {
 	background-color: var(--links);
-	color: var(--active-link);
+	color: var(--gray500);
 }
 
 .button {

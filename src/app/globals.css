@@ -34,10 +34,10 @@
   --border-radius: 12px;
 
   --background-end-rgb: 255, 255, 255;
-  --bg-container: rgba(199, 199, 199, 0.3);
+  --bg-container: var(--gray500);
   --text: rgb(30, 30, 30);
   --text-primary: rgb(20, 20, 20);
-  --text-light: var(--grey800);
+  --text-light: var(--gray800);
 
   /* Buttons */
   --btn-bg: var(--bg-container);
@@ -66,7 +66,8 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
   --links: var(--blue-1000);
-  --active-link: white;
+  --active-link: var(--blue-1000);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -105,6 +106,22 @@
     /* Dark Colors */
     --black1000: rgb(242, 242, 242);
     --black900: rgba(242, 242, 242, 0.8);
+
+    --gray1000: rgb(120, 120, 120);
+    --gray900: rgb(120, 120, 120, 0.9);
+    --gray800: rgb(120, 120, 120, 0.8);
+    --gray700: rgb(120, 120, 120, 0.7);
+    --gray600: rgb(193, 193, 193, 0.6);
+    --gray500: rgba(244, 244, 244);
+
+    --blue-1000: rgb(31, 31, 218);
+    --blue-900: rgba(31, 31, 218, 0.9);
+    --blue-800: rgba(31, 31, 218, 0.8);
+    --blue-700: rgba(31, 31, 218, 0.7);
+    --blue-600: rgba(31, 31, 218, 0.6);
+    --blue-500: rgba(31, 31, 218, 0.5);
+    --blue-400: rgba(31, 31, 218, 0.4);
+
   }
 }
 
