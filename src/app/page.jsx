@@ -17,7 +17,7 @@ const Home = () => {
     <div className={styles.imgContainer}>
       <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
     </div>
-  </div >;
+  </div>
 };
 
 export default Home;

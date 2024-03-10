@@ -13,6 +13,16 @@
   --screen-xs: 375px;
 
   /* Colors */
+  --black1000: #111111;
+  --black900: rgba(17, 17, 17, 0.8);
+
+  --gray1000: rgb(120, 120, 120);
+  --gray900: rgb(120, 120, 120, 0.9);
+  --gray800: rgb(120, 120, 120, 0.8);
+  --gray700: rgb(120, 120, 120, 0.7);
+  --gray600: rgb(193, 193, 193, 0.6);
+  --gray500: rgba(244, 244, 244);
+
   --blue-1000: rgb(0, 0, 255);
   --blue-900: rgba(0, 0, 255, 0.9);
   --blue-800: rgba(0, 0, 255, 0.8);
@@ -29,10 +39,10 @@
   --bg-container: rgba(199, 199, 199, 0.3);
   --text: rgb(30, 30, 30);
   --text-primary: rgb(20, 20, 20);
-  --text-light: rgba(255, 255, 255, 0.8);
+  --text-light: var(--grey800);
 
   /* Buttons */
-  --btn-bg: var(--text-primary);
+  --btn-bg: var(--bg-container);
 
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,

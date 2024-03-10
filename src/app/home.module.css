@@ -21,6 +21,10 @@
 	position: relative;
 }
 
+.heroImg {
+	object-fit: fill;
+}
+
 .brands {
 	width: 500px;
 	height: 50px;
@@ -35,11 +39,12 @@
 
 .button:first-child {
 	background-color: var(--links);
+	color: var(--active-link);
 }
 
 .button {
 	background-color: var(--btn-bg);
-	color: var(--text-light);
+	color: var(--text-primary);
 	padding: 20px;
 	min-width: 120px;
 	cursor: pointer;
