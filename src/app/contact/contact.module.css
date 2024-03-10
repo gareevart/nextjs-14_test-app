@@ -43,3 +43,25 @@
 	border-radius: 12px;
 	font-size: 16px;
 }
+
+@media (max-width: 768px) {
+	.imgContainer {
+		flex: none;
+		height: 300px;
+		position: relative;
+	}
+
+	.container {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.container {
+		padding-top: 20px;
+	}
+}

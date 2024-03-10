@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Image from 'next/image';
 import styles from "./home.module.css";
 
@@ -17,6 +18,7 @@ const Home = () => {
     <div className={styles.imgContainer}>
       <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
     </div>
+    <SpeedInsights />
   </div>
 };
 

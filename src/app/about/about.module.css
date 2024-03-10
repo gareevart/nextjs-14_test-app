@@ -1,4 +1,5 @@
 .container {
+	padding-top: 32px;
 	display: flex;
 	gap: 100px;
 }
@@ -45,4 +46,34 @@
 
 .img {
 	object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+	.imgContainer {
+		height: 300px;
+		position: relative;
+	}
+
+	.container {
+		padding-top: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.imgContainer {
+		flex: none;
+		height: 300px;
+		position: relative;
+	}
+
+	.container {
+		padding: 20px 0;
+		display: flex;
+		align-items: stretch;
+		flex-direction: column-reverse;
+	}
+
+	.textContainer {
+		text-align: center;
+	}
 }

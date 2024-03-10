@@ -12,7 +12,6 @@ const PostPage = () => {
 					fill />
 			</div>
 			<div className={styles.textContainer}>
-				<a className={styles.back} href="javascript:history.back()">Back</a>
 				<h1 className={styles.title}>Title</h1>
 				<div className={styles.detail}>
 					<Image
