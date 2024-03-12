@@ -3,11 +3,11 @@
 	flex-wrap: wrap;
 	gap: 20px;
 	padding: 20px 0;
+	flex-direction: row;
 }
 
 .post {
 	width: 30%;
-	padding: 12px;
 	border-radius: 8px;
 	border: var(--gray600) solid 1px;
 }
