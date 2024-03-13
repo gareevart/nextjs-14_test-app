@@ -1,10 +1,9 @@
 "use client"
+import styles from './page.module.css'
 
 const Error = () => {
 	return (
-		<div>
-			Fucking error
-		</div>
+		<div className={styles.main}><h1 className={styles.error}>Fucking error</h1></div>
 	)
 }
 
