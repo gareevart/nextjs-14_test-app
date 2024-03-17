@@ -4,17 +4,26 @@
 	gap: 20px;
 	padding: 20px 0;
 	flex-direction: row;
+	flex: 1 1 auto;
+	justify-content: flex-start
 }
 
 .post {
-	width: 30%;
+	text-align: left;
 	border-radius: 8px;
 	border: var(--gray600) solid 1px;
+	width: calc(100% / 3 - 20px);
+	max-width: 100%;
+}
+
+.blog:last-child {
+	margin-right: 0;
 }
 
 @media screen and (max-width: 1280px) {
 	.post {
-		width: 45%;
+		width: calc(100% / 2 - 20px);
+		flex: 1 1 auto;
 	}
 }
 

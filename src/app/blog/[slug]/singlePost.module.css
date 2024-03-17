@@ -1,8 +1,11 @@
 .container {
 	display: flex;
+	width: var(--screen-m);
+	margin: 0 auto;
 	gap: 50px;
 	height: 100vh;
 	margin-top: 20px;
+	flex-direction: column;
 }
 
 .back {
@@ -16,6 +19,7 @@
 	flex: 2;
 	position: relative;
 	height: calc(100vh - 200px);
+	min-height: 350px;
 }
 
 .img {
@@ -40,11 +44,6 @@
 	gap: 10px;
 }
 
-.avatar {
-	object-fit: cover;
-	border-radius: 50px;
-}
-
 .detailText {
 	display: flex;
 	flex-direction: column;
@@ -62,6 +61,6 @@
 
 @media (max-width: 768px) {
 	.imgContainer {
-		display: none;
+		display: block;
 	}
 }

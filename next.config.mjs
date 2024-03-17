@@ -5,8 +5,12 @@ const nextConfig = {
 		remotePatterns: [
 			{
 				protocol: 'https',
-				hostname: "images.pexels.com"
-			}
+				hostname: "storage.yandexcloud.net"
+			},
+			{
+				protocol: 'https',
+				hostname: 'images.pexels.com'
+			},
 
 		]
 	}

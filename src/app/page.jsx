@@ -11,14 +11,14 @@ const Home = () => {
       <p className={styles.desc}>text with description about my hobby</p>
       <div className={styles.buttons}>
         <Link href='/projects'><button className={styles.button}>Show all projects</button></Link>
-        <button className={styles.button}>About me</button>
+        <Link href="/about" className={styles.button}>About me</Link>
       </div>
       <div className={styles.brands}>
-        <Image src="/brands.png" alt="" fill className={styles.brandImg} />
+        <Image src="/brands.png" alt="" fill sizes="100vw" className={styles.brandImg} />
       </div>
     </div>
     <div className={styles.imgContainer}>
-      <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
+      <Image src="/hero.gif" alt="" fill sizes="100vw" className={styles.heroImg} />
     </div>
     <SpeedInsights />
     <Analytics />

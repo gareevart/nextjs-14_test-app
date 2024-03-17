@@ -1,34 +1,39 @@
 import styles from "./postUser.module.css";
+import Image from "next/image";
+import { getUser } from "@/lib/data";
+// FETCH DATA WITH AN API
+// const getData = async (userId) => {
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}` ,{cache:"no-store"});
 
-const getData = async (userId) => {
-	try {
-		const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, { cache: "no-store" });
+//   if (!res.ok) {
+//     throw new Error("Something went wrong");
+//   }
 
-		if (!res.ok) {
-			throw new Error("Something went wrong");
-		}
-		return res.json();
+//   return res.json();
+// };
 
-	} catch (error) {
-		return { error: error.message };
-	}
-};
+const PostUser = async ({ userId }) => {
+	// FETCH DATA WITH AN API
+	// const user = await getData(userId);
 
+	// FETCH DATA WITHOUT AN API
+	const user = await getUser(userId);
 
-const postUser = async ({ userId }) => {
-
-	const user = await getData(userId);
-	if (user.error) {
-		// Handle the error case here
-		console.error("Error fetching user data:", user.error);
-		return null; // Or return an appropriate fallback UI
-	}
 	return (
 		<div className={styles.container}>
-			<span className={styles.title}>Author</span>
-			<span className={styles.username}>{user.username}</span>
+			<Image
+				className={styles.avatar}
+				src={user.img ? user.img : "/noavatar.png"}
+				alt=""
+				width={50}
+				height={50}
+			/>
+			<div className={styles.texts}>
+				<span className={styles.title}>Author</span>
+				<span className={styles.username}>{user.username}</span>
+			</div>
 		</div>
 	);
 };
 
-export default postUser;
+export default PostUser;
