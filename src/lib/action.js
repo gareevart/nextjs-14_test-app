@@ -1,8 +1,9 @@
+"use server";
+import { revalidatePath } from 'next/cache';
 import { Post } from './models';
 import { connectToDb } from './utils';
 
 export const addPost = async (formData) => {
-	"use server";
 
 	// const title = formData.get("title");
 	// const desc = formData.get("desc");
@@ -21,9 +22,27 @@ export const addPost = async (formData) => {
 
 		await newPost.save();
 		console.log("Saved to db");
+		revalidatePath("/blog");
+
 	} catch (err) {
 		console.log(err);
 		return { error: "Post creation error!" }
 	}
 	console.log(title, desc, slug, userId);
-} 
+};
+
+export const deletePost = async (formData) => {
+	const { id } = Object.fromEntries(formData);
+
+	try {
+		connectToDb();
+
+		await Post.findByIdAndDelete(id);
+		console.log("Deleted from db");
+		revalidatePath("/blog");
+
+	} catch (err) {
+		console.log(err);
+		return { error: "Post creation error!" }
+	}
+};

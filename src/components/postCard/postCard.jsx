@@ -5,7 +5,6 @@ import { getPosts } from '@/lib/data';
 
 const postCard = ({ post }) => {
 
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.top}>
