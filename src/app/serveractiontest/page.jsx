@@ -1,4 +1,5 @@
 import { addPost, deletePost } from '@/lib/action';
+import styles from "./serveractiontest.module.css";
 
 const ServerAction = () => {
 	// const actionInComponent = async () => {
@@ -6,17 +7,18 @@ const ServerAction = () => {
 	// 	console.log("it works!");
 	// }
 	return (
-		<div>
-			<form action={addPost}>
-				<input type="text" placeholder="title" name='title' />
-				<input type="text" placeholder="desc" name='desc' />
-				<input type="text" placeholder="slug" name='slug' />
-				<input type="text" placeholder="userId" name='userId' />
+		<div className={styles.container}>
+			<h2>Create post</h2>
+			<form className={styles.form} action={addPost}>
+				<input className={styles.input} type="text" placeholder="Title" name='title' />
+				<textarea className={styles.input} type="text" placeholder="Post description" name='desc' id="" cols="30" rows="10"></textarea>
+				<input className={styles.input} type="text" placeholder="slug" name='slug' />
+				<input className={styles.input} type="text" placeholder="userId" name='userId' />
 				<button>Create</button>
 			</form>
-			<form action={deletePost}>
+			<form className={styles.form} action={deletePost}>
 				<input type="text" placeholder="postId" name="id" />
-				<button>Delete post</button>
+				<button className={styles.detele}>Delete post</button>
 			</form>
 		</div>
 	)

@@ -9,7 +9,11 @@ const postCard = ({ post }) => {
 		<div className={styles.container}>
 			<div className={styles.top}>
 				{post.img && <div className={styles.imgContainer}>
-					<Image src={post.img} alt='' fill className={styles.img} />
+					<Image
+						src={post.img} alt=''
+						fill
+						className={styles.img}
+					/>
 				</div>}
 			</div>
 			<div className={styles.bottom}>

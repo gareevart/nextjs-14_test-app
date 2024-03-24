@@ -4,14 +4,15 @@ import PostUser from "@/components/postUser/postUser";
 import { Suspense } from 'react';
 import { getPost } from '@/lib/data';
 
-// const getData = async (slug) => {
-// 	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+// fetch data with an api
+const getData = async (slug) => {
+	const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
-// 	if (!res.ok) {
-// 		throw new Error("Something went wrong")
-// 	}
-// 	return res.json();
-// };
+	if (!res.ok) {
+		throw new Error("Something went wrong")
+	}
+	return res.json();
+};
 
 // for SEO optimisation
 export const generateMetadata = async ({ params }) => {
@@ -26,16 +27,24 @@ export const generateMetadata = async ({ params }) => {
 
 const PostPage = async ({ params }) => {
 	const { slug } = params;
-	// const post = await getData(slug);
+	const post = await getData(slug);
 
 	// fetch data without an api
-	const post = await getPost(slug);
+	// const post = await getPost(slug);
 
 	console.log(post);
 	return (
 		<div className={styles.container}>
 			{post.img && <div className={styles.imgContainer}>
-				<Image src={post.img} alt='' fill className={styles.img} />
+				<Image
+					src={post.img} alt=''
+					className={styles.img}
+					sizes="500px"
+					fill
+					style={{
+						objectFit: 'cover',
+					}}
+				/>
 			</div>}
 			<div className={styles.textContainer}>
 				<h1 className={styles.title}>{post.title}</h1>

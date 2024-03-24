@@ -1,12 +1,12 @@
 .navbar {
 	display: flex;
 	height: 80px;
-	padding: 20px;
+	padding: var(--s5);
 	align-items: center;
 	justify-content: space-between;
-	border-radius: 12px;
+	border-radius: var(--s3);
 	background: var(--bg-container);
-	margin-top: 20px;
+	margin-top: var(--s5);
 	color: var(--text);
 }
 

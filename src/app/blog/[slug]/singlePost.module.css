@@ -1,6 +1,6 @@
 .container {
 	display: flex;
-	width: var(--screen-m);
+	width: 100%;
 	margin: 0 auto;
 	gap: 50px;
 	height: 100vh;
@@ -16,10 +16,11 @@
 }
 
 .imgContainer {
-	flex: 2;
+	flex: 1;
 	position: relative;
 	height: calc(100vh - 200px);
 	min-height: 350px;
+	width: 100%;
 }
 
 .img {

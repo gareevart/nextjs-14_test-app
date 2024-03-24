@@ -1,0 +1,69 @@
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.imgContainer {
+	flex: 1;
+	height: 500px;
+	position: relative;
+}
+
+.img {
+	object-fit: contain;
+}
+
+.formContainer {
+	flex: 1;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 640px;
+}
+
+.form input,
+.form textarea {
+	padding: 20px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	background-color: var(--bg-container);
+	color: var(--text-primary);
+}
+
+.form button {
+	background-color: var(--links);
+	color: var(--gray500);
+	padding: 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+button .delete {
+	background-color: none;
+	border: solid 1px red;
+}
+
+@media (max-width: 768px) {
+
+	.container {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.container {
+		padding-top: 20px;
+	}
+}
