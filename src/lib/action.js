@@ -2,8 +2,7 @@
 import { revalidatePath } from 'next/cache';
 import { Post, User } from './models';
 import { connectToDb } from './utils';
-import { signOut } from './auth';
-import { signIn } from './auth';
+import { signOut, signIn } from './auth';
 import bcrypt from "bcryptjs";
 
 export const addPost = async (formData) => {
@@ -51,10 +50,12 @@ export const deletePost = async (formData) => {
 };
 
 export const handleGithubLogin = async () => {
+	"use server";
 	await signIn("github");
 };
 
 export const handleLogout = async () => {
+	"use server";
 	await signOut("github");
 };
 
@@ -84,6 +85,7 @@ export const register = async (formData) => {
 
 		await newUser.save();
 		console.log("Saved to db");
+		return { success: true };
 	} catch (err) {
 		console.log(err);
 		return { error: "Something went wrong!" };
@@ -92,10 +94,15 @@ export const register = async (formData) => {
 
 export const login = async (formData) => {
 	const { username, password } = Object.fromEntries(formData);
+
 	try {
 		await signIn("credentials", { username, password });
 	} catch (err) {
 		console.log(err);
-		return { error: "Something went wrong!" };
+
+		if (err.message.includes("CredentialsSignin")) {
+			return { error: "Invalid username or password" };
+		}
+		throw err;
 	}
-}
+};
