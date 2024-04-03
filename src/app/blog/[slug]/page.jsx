@@ -7,7 +7,7 @@ import { blogApiLink } from '../page';
 
 // fetch data with an api
 const getData = async (slug) => {
-	const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+	const res = await fetch(`https://gareev.vercel.app/api/blog/${slug}`);
 
 	if (!res.ok) {
 		throw new Error("Something went wrong")
