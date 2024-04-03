@@ -10,7 +10,7 @@ const RegisterForm = () => {
 	return (
 		<div>
 			<div className={styles.container}>
-				<h2>Register new user</h2>
+				<h4>Register new user</h4>
 				<form className={styles.form} action={register}>
 					<input className={styles.input} type="text" placeholder="Username" name="username" />
 					<input className={styles.input} type="mail" placeholder="Email" name="email" />

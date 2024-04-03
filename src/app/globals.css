@@ -4,7 +4,34 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  /* Container */
+  /* Text styles */
+
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  /* Containers */
   --screen-xxl: 1280px;
   --screen-xl: 1120px;
   --screen-l: 1024px;
@@ -43,9 +70,17 @@
   --s7: 28px;
   --s8: 32px;
 
+  /* Text colors */
+
+  --text-primary: rgba(0, 0, 0, 0.85);
+  --text-complementary: rgba(0, 0, 0, 0.70);
+  --text-secondary: rgba(0, 0, 0, 0.50);
+  --text-hint: rgba(0, 0, 0, 0.30);
 
 
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255,
+  255,
+  255;
   --bg-container: var(--gray500);
   --text: rgb(30, 30, 30);
   --text-primary: rgb(20, 20, 20);
@@ -55,28 +90,40 @@
   --btn-bg: var(--bg-container);
 
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
-      #16abff33 0deg,
-      #0885ff33 55deg,
-      #54d6ff33 120deg,
-      #0071ff33 160deg,
-      transparent 360deg);
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg);
   --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0));
+    rgba(255, 255, 255, 0));
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
+  --tile-start-rgb: 239,
+  245,
+  249;
+  --tile-end-rgb: 228,
+  232,
+  233;
   --tile-border: conic-gradient(#00000080,
-      #00000040,
-      #00000030,
-      #00000020,
-      #00000010,
-      #00000010,
-      #00000080);
+    #00000040,
+    #00000030,
+    #00000020,
+    #00000010,
+    #00000010,
+    #00000080);
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --callout-rgb: 238,
+  240,
+  241;
+  --callout-border-rgb: 172,
+  175,
+  176;
+  --card-rgb: 180,
+  185,
+  188;
+  --card-border-rgb: 131,
+  134,
+  135;
   --links: var(--blue-1000);
   --active-link: var(--blue-1000);
 
@@ -115,7 +162,14 @@
     --text-primary: white;
     --text-light: rgb(20, 20, 20);
 
-    /* Dark Colors */
+
+    /* Text colors */
+    --text-primary: rgba(255, 255, 255, 0.85);
+    --text-complementary: rgba(255, 255, 255, 0.7);
+    --text-secondary: rgba(255, 255, 255, 0.5);
+    --text-hint: rgba(255, 255, 255, 0.3);
+
+    /* Dark colors*/
     --black1000: rgb(242, 242, 242);
     --black900: rgba(242, 242, 242, 0.8);
 
@@ -133,6 +187,7 @@
     --blue-600: rgba(31, 31, 218, 0.6);
     --blue-500: rgba(31, 31, 218, 0.5);
     --blue-400: rgba(31, 31, 218, 0.4);
+
 
   }
 }

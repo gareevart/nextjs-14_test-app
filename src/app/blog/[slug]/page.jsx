@@ -3,6 +3,7 @@ import styles from "./singlePost.module.css"
 import PostUser from "@/components/postUser/postUser";
 import { Suspense } from 'react';
 import { getPost } from '@/lib/data';
+import { blogApiLink } from '../page';
 
 // fetch data with an api
 const getData = async (slug) => {

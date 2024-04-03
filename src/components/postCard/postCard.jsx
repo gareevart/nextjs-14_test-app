@@ -18,7 +18,7 @@ const postCard = ({ post }) => {
 			</div>
 			<div className={styles.bottom}>
 				<span className={styles.date}>01.01.2024</span>
-				<h1 className={styles.title}>{post.title}</h1>
+				<h4 className={styles.title}>{post.title}</h4>
 				<p className={styles.desc}>{post.desc.toString().slice(0, 30)}</p>
 				<Link href={`/blog/${post.slug}`}>Read more</Link>
 			</div>

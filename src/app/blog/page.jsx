@@ -3,8 +3,10 @@ import styles from "./blog.module.css";
 import { getPosts } from '@/lib/data';
 
 // // FETCH DATA WITH AN API
+export const blogApiLink = process.env.DOMAIN + "/api/blog";
+
 const getData = async () => {
-	const res = await fetch("https://gareev.vercel.app/api/blog", { next: { revalidate: 3600 } });
+	const res = await fetch(blogApiLink, { next: { revalidate: 3600 } });
 
 	if (!res.ok) {
 		throw new Error("Something went wrong");

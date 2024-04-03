@@ -23,6 +23,6 @@
 }
 
 .title {
-	color: var(--gray900);
+	color: var(--text-secondary);
 	font-weight: 500;
 }
