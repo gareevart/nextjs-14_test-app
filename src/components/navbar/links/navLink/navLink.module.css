@@ -12,7 +12,7 @@ a.navbar {
 
 .active {
 	background-color: var(--blue-800);
-	color: var(--gray500);
+	color: var(--text-light-primary);
 	border-radius: 12px;
 	padding: 8px 12px;
 }

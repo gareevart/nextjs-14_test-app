@@ -76,11 +76,10 @@
   --text-complementary: rgba(0, 0, 0, 0.70);
   --text-secondary: rgba(0, 0, 0, 0.50);
   --text-hint: rgba(0, 0, 0, 0.30);
+  --invert: var(--gray500);
 
+  --text-light-primary: #ffffff;
 
-  --background-end-rgb: 255,
-  255,
-  255;
   --bg-container: var(--gray500);
   --text: rgb(30, 30, 30);
   --text-primary: rgb(20, 20, 20);
@@ -118,9 +117,7 @@
   --callout-border-rgb: 172,
   175,
   176;
-  --card-rgb: 180,
-  185,
-  188;
+  --input-rgb: rgb(185, 185, 188);
   --card-border-rgb: 131,
   134,
   135;
@@ -169,6 +166,8 @@
     --text-secondary: rgba(255, 255, 255, 0.5);
     --text-hint: rgba(255, 255, 255, 0.3);
 
+    --text-light-primary: #ffffff;
+
     /* Dark colors*/
     --black1000: rgb(242, 242, 242);
     --black900: rgba(242, 242, 242, 0.8);
@@ -178,7 +177,7 @@
     --gray800: rgb(47, 47, 47, 0.8);
     --gray700: rgb(47, 47, 47, 0.7);
     --gray600: rgba(47, 47, 47, 0.6);
-    --gray500: rgba(244, 244, 244);
+    --gray500: #434343;
 
     --blue-1000: rgb(31, 31, 218);
     --blue-900: rgba(31, 31, 218, 0.9);
@@ -187,7 +186,7 @@
     --blue-600: rgba(31, 31, 218, 0.6);
     --blue-500: rgba(31, 31, 218, 0.5);
     --blue-400: rgba(31, 31, 218, 0.4);
-
+    --invert: white;
 
   }
 }

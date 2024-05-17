@@ -1,0 +1,37 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	display: flex;
+	width: 500px;
+	background-color: var(--bg-container);
+	padding: 40px;
+	flex-direction: column;
+	text-align: center;
+	gap: 32px;
+	border-radius: 8px;
+}
+
+.button {
+	background-color: var(--gray600);
+	color: var(--text-primary);
+	padding: 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 12px;
+	font-size: 16px;
+	width: 100%;
+}
+
+.button:hover {
+	background-color: var(--gray700);
+	transition: background-color 250ms, border 200ms;
+}
+
+.form button:last-child:hover {
+	transition: background-color 250ms, border 200ms;
+	background-color: var(--blue-800);
+}

@@ -59,7 +59,7 @@ export const handleLogout = async () => {
 	await signOut("github");
 };
 
-export const register = async (formData) => {
+export const register = async (previousState, formData) => {
 	const { username, email, password, img, passwordRepeat } = Object.fromEntries(formData);
 
 	if (password !== passwordRepeat) {

@@ -13,13 +13,15 @@ const Home = () => {
         <Link href='/projects'><button className={styles.button}>Show all projects</button></Link>
         <Link href="/about" className={styles.button}>About me</Link>
       </div>
-      <div className={styles.brands}>
-        <Image src="/brands.png" alt="" fill sizes="100vw" className={styles.brandImg} />
+    </div>
+    <div className={styles.grid}>
+      <div className={styles.card}>
+        <div className={styles.imgContainer}>
+          <Image src="/next.svg" alt="" fill sizes="100vw" className={styles.heroImg} />
+        </div>
       </div>
     </div>
-    <div className={styles.imgContainer}>
-      <Image src="/hero.gif" alt="" fill sizes="100vw" className={styles.heroImg} />
-    </div>
+
     <SpeedInsights />
     <Analytics />
   </div>

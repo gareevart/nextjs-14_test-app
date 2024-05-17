@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	gap: 100px;
+	min-height: 100%;
 }
 
 .title {
@@ -13,7 +14,10 @@
 }
 
 .textContainer {
+	display: flex;
+	flex-direction: column;
 	flex: 1;
+	gap: 20px;
 }
 
 .imgContainer {
@@ -25,12 +29,37 @@
 	object-fit: fill;
 }
 
-.brands {
-	width: 500px;
-	height: 50px;
-	position: relative;
-	filter: grayscale(1);
+.grid {
+	display: grid;
+	flex: 1;
+	width: 100vh;
 }
+
+.card {
+	display: flex;
+	padding: 1rem 1.2rem;
+	border-radius: var(--s4);
+	background: var(--invert);
+	border: 1px solid var(--gray600);
+	transition: background 300ms, border 200ms;
+}
+
+.card:hover {
+	background: var(--invert);
+	border: 1px solid var(--gray600);
+	transition: background 300ms, border 200ms;
+}
+
+.card p {
+	margin: 0;
+	opacity: 0.6;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	max-width: 30ch;
+	text-wrap: balance;
+}
+
+
 
 .buttons {
 	display: flex;
@@ -39,7 +68,7 @@
 
 .button:first-child {
 	background-color: var(--links);
-	color: var(--gray500);
+	color: white;
 }
 
 .button {
@@ -59,6 +88,10 @@
 		text-align: center;
 	}
 
+	.grid {
+		display: none;
+	}
+
 	.brands {
 		margin: 0 auto;
 	}
@@ -74,7 +107,7 @@
 		font-size: 54px;
 	}
 
-	.brands {
+	.grid {
 		display: none;
 	}
 

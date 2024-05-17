@@ -10,7 +10,7 @@ const About = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.textContainer}>
-				<h2 className={styles.subtitle}>About me</h2>
+				<h3 className={styles.subtitle}>About me</h3>
 				<h1 className={styles.title}>Dmitrii Gareev – Product designer</h1>
 				<p className={styles.desc}>
 					Hello everyone im Product Designer from Serbia.
