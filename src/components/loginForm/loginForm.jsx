@@ -20,11 +20,11 @@ const LoginrForm = () => {
 	return (
 		<div>
 			<div className={styles.container}>
-				<h4>Register new user</h4>
+				<h4>Sign in</h4>
 				<form className={styles.form} action={formAction}>
 					<input className={styles.input} type="text" placeholder="Username" name="username" />
 					<input className={styles.input} type="password" placeholder="Password" name="password" />
-					<button className={styles.button}>Login</button>
+					<button className={styles.button}>Sign in</button>
 					{state?.error}
 					<Link href="/register">
 						{"Don't have an account?"} <b>Register</b>

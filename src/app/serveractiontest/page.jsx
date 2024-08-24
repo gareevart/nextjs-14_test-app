@@ -14,6 +14,7 @@ const ServerAction = () => {
 				<textarea className={styles.input} type="text" placeholder="Post description" name='desc' id="" cols="30" rows="10"></textarea>
 				<input className={styles.input} type="text" placeholder="slug" name='slug' />
 				<input className={styles.input} type="text" placeholder="userId" name='userId' />
+				<input className={styles.input} type="text" placeholder="image" name='img' />
 				<button>Create</button>
 			</form>
 			<form className={styles.form} action={deletePost}>

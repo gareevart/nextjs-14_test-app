@@ -38,7 +38,8 @@ const PostPage = async ({ params }) => {
 		<div className={styles.container}>
 			{post.img && <div className={styles.imgContainer}>
 				<Image
-					src={post.img} alt=''
+					src={post.img || "/post-placeholder.png"}
+					alt={post.title || "Post Image"}
 					className={styles.img}
 					sizes="500px"
 					fill
