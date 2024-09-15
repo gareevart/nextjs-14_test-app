@@ -12,9 +12,10 @@
 
 .wrapper {
 	display: flex;
-	width: 500px;
+	max-width: 100%;
 	background-color: var(--bg-container);
 	padding: 40px;
+	margin: 0 auto;
 	flex-direction: column;
 	text-align: center;
 	gap: 32px;

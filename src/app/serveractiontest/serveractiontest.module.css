@@ -38,7 +38,7 @@
 
 .form button {
 	background-color: var(--links);
-	color: var(--gray500);
+	color: var(--text-light-primary);
 	padding: 20px;
 	cursor: pointer;
 	border: none;

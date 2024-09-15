@@ -27,14 +27,24 @@ export const getPost = async (slug) => {
 export const getUser = async (id) => {
 	noStore();
 	try {
-		connectToDb();
+		console.log(`Attempting to connect to the database and fetch user with id: ${id}`);
+		await connectToDb();
+		console.log(`Connected to the database. Searching for user with id: ${id}`);
 		const user = await User.findById(id);
+
+		if (!user) {
+			console.log(`User with id ${id} not found`);
+			return null; // Возвращаем null вместо выброса исключения
+		}
+
+		console.log(`Successfully fetched user: ${user.username || user._id}`);
 		return user;
 	} catch (err) {
-		console.log(err);
-		throw new Error("Failed to fetch user!");
+		console.error('Error in getUser:', err);
+		return null; // Возвращаем null в случае любой ошибки
 	}
 };
+
 
 export const getUsers = async () => {
 	try {

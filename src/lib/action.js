@@ -4,34 +4,42 @@ import { Post, User } from './models';
 import { connectToDb } from './utils';
 import { signOut, signIn } from './auth';
 import bcrypt from "bcryptjs";
+import { put } from '@vercel/blob';
 
 export const addPost = async (formData) => {
-
-	// const title = formData.get("title");
-	// const desc = formData.get("desc");
-	// const slug = formData.get("slug");
-
-	const { title, desc, slug, userId } = Object.fromEntries(formData);
+	const { title, desc, slug, userId, img } = Object.fromEntries(formData);
+	let imageUrl = img; // Перемещено сюда
 
 	try {
 		connectToDb();
+
+		// Если img - это File объект (загруженное изображение), а не URL
+		if (img instanceof File) {
+			const blob = await put(img.name, img, {
+				access: 'public',
+			});
+			imageUrl = blob.url;
+		}
+
 		const newPost = new Post({
 			title,
 			desc,
 			slug,
 			userId,
+			img: imageUrl, // Используем URL из Blob Storage или переданный URL
 		});
 
 		await newPost.save();
 		console.log("Saved to db");
 		revalidatePath("/blog");
-
 	} catch (err) {
 		console.log(err);
 		return { error: "Post creation error!" }
 	}
-	console.log(title, desc, slug, userId);
+
+	// Убран console.log здесь, так как он больше не нужен
 };
+
 
 export const deletePost = async (formData) => {
 	const { id } = Object.fromEntries(formData);
