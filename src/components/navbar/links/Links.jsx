@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from "./links.module.css";
 import NavLink from './navLink/navLink';
 import Image from 'next/image';
@@ -24,21 +25,40 @@ const links = [
     path: "/blog",
   },
 ];
-const Links = ({ session }) => {
-  const [open, setOpen] = useState(false)
 
-  //TEMPORARY	
-  const isAdmin = true;
+const Links = ({ session }) => {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const [activePath, setActivePath] = useState(pathname);
+
+  useEffect(() => {
+    if (pathname.startsWith('/blog')) {
+      setActivePath('/blog');
+    } else {
+      setActivePath(pathname);
+    }
+  }, [pathname]);
+
+  const handleLinkClick = (path) => {
+    setActivePath(path);
+  };
+
+  const isAdmin = session?.user?.isAdmin;
 
   return (
     <div className={styles.navbar}>
       <div className={styles.links}>
         {links.map((link) => (
-          <NavLink item={link} key={link.title} />
+          <NavLink 
+            item={link} 
+            key={link.title} 
+            isActive={activePath === link.path}
+            onClick={() => handleLinkClick(link.path)}
+          />
         ))}
         {session?.user ? (
           <>
-            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
             <form action={handleLogout}>
               <button className={styles.logout}>Logout</button>
             </form>
@@ -57,7 +77,12 @@ const Links = ({ session }) => {
       {
         open && <div className={styles.mobileLinks}>
           {links.map((link) => (
-            <NavLink item={link} key={link.title} />
+            <NavLink 
+              item={link} 
+              key={link.title} 
+              isActive={activePath === link.path}
+              onClick={() => handleLinkClick(link.path)}
+            />
           ))}
         </div>
       }
