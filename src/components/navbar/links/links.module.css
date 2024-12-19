@@ -1,7 +1,9 @@
 .links {
 	display: flex;
+	white-space: nowrap;
 	align-items: center;
 	gap: 20px;
+	
 }
 
 .logout {
