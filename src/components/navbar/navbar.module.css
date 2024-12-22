@@ -1,5 +1,9 @@
 .navbar {
 	display: flex;
+	position: fixed;
+	top: var(--s5);
+	width: var(--screen-l);
+	z-index: 1000; 
 	height: 80px;
 	padding: var(--s5);
 	align-items: center;

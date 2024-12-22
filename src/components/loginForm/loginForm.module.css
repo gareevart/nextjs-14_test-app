@@ -28,7 +28,7 @@
 }
 
 .form input:hover {
-	background-color: white;
+	background-color: var(--gray700);
 	border: solid 1px var(--links);
 }
 
