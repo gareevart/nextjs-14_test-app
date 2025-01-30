@@ -221,7 +221,7 @@ a {
   justify-content: space-between;
 }
 
-@media (max-width: 2560px) {
+@media (max-width: 3840px) {
   .container {
     width: var(--screen-xxl);
   }
