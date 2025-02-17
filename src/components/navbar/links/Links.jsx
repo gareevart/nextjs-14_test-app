@@ -69,7 +69,7 @@ const Links = ({ session }) => {
       </div>
       <Image
         className={styles.menuButton}
-        src="/menu.png"
+        src={open ? "/close.svg" : "/menu.png"}
         alt=""
         width={30} height={30}
         onClick={() => setOpen((prev) => !prev)}
